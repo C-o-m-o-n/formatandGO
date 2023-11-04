@@ -21,19 +21,19 @@ function activate(context) {
   }
   
   
-  vscode.window.showInformationMessage(' Hello formatter!,  success');
-
-//the main code.........
-function formatGoCode() {
-	// Get the active text editor
-	const editor = vscode.window.activeTextEditor;
   
-	if (editor) {
-	  // Get the selected text
-	  const selectedText = editor.document.getText(editor.selection);
-  
-	  // Execute gofmt to format the code
-	  exec(`echo go fmt "${selectedText}"`, (error, stdout, stderr) => {
+  //the main code.........
+  function formatGoCode() {
+	  // Get the active text editor
+	  const editor = vscode.window.activeTextEditor;
+	  
+	  if (editor) {
+		  // Get the selected text
+		  const selectedText = editor.document.getText(editor.selection);
+		  
+		  // Execute gofmt to format the code
+		  exec(`echo go fmt "${selectedText}"`, (error, stdout, stderr) => {
+		  vscode.window.showInformationMessage(' Formatted and went successfully');
 		if (error) {
 		  console.error(`Error: ${error.message}`);
 		  return;
@@ -51,11 +51,6 @@ function formatGoCode() {
 	}
   }
   
-  
-  
-
-  
-
 
 
 // This method is called when your extension is deactivated
