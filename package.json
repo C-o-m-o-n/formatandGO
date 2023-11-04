@@ -4,7 +4,7 @@
   "description": "An extension for formatting Go code",
   "version": "0.0.1",
   "publisher": "your-publisher",
-  "icon": "images/your-icon.png",
+  "repository": "https://github.com/C-o-m-o-n/formatandgo",
   "engines": {
     "vscode": "^1.84.0"
   },

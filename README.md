@@ -1,7 +1,7 @@
 # formatandgo README
 
 <pre>
-```plaintext
+
     _                         _______           ___             __________
    |X|                       /        +        /   \           +         /
   XXXXX                     /     ____/       /     \          |    ____/
@@ -13,7 +13,7 @@
     X                  /____/           +___+         +___+     +_________+         |
 ____________________________________________________________________________________+
 
-``` 
+
 </pre>
 Welcome to the formatandgo extension for Visual Studio Code!
 
@@ -22,6 +22,9 @@ Welcome to the formatandgo extension for Visual Studio Code!
 This extension helps you format your Go code with ease. It integrates the `go fmt` command directly into your editor, allowing you to format your code quickly and efficiently. No more manual formatting – just let formatandgo do the work for you!
 
 ![Formatting in Action](images/formatting-in-action.gif)
+
+# NOTICE
+## Please note that the project is still under development so most of it's features are experimental. Please do not use it on your important projects yet. I'll be more than happy to anounce to you once there is a stable release
 
 ## Requirements
 
