@@ -1,13 +1,15 @@
 {
   "name": "formatandgo",
-  "displayName": "formatAndGo",
-  "description": "",
+  "displayName": "format And Go",
+  "description": "An extension for formatting Go code",
   "version": "0.0.1",
+  "publisher": "your-publisher",
+  "icon": "images/your-icon.png",
   "engines": {
     "vscode": "^1.84.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages"
   ],
   "activationEvents": [],
   "main": "./extension.js",
