@@ -1,4 +1,7 @@
 # formatandgo README
+
+<pre>
+```plaintext
     _                         _______           ___             __________
    |X|                       /        +        /   \           +         /
   XXXXX                     /     ____/       /     \          |    ____/
@@ -10,7 +13,8 @@
     X                  /____/           +___+         +___+     +_________+         |
 ____________________________________________________________________________________+
 
-
+``` 
+</pre>
 Welcome to the formatandgo extension for Visual Studio Code!
 
 ## Features
