@@ -21,35 +21,36 @@ function activate(context) {
   }
   
   
+  vscode.window.showInformationMessage(' Hello formatter!,  success');
 
 //the main code.........
 function formatGoCode() {
 	// Get the active text editor
 	const editor = vscode.window.activeTextEditor;
+  
 	if (editor) {
-	  // Get the selected (highlighted) text
+	  // Get the selected text
 	  const selectedText = editor.document.getText(editor.selection);
   
-	  if (selectedText) {
-		// Execute go fmt with the selected text
-		exec(`echo "${selectedText}" | go fmt`, (error, stdout, stderr) => {
-			vscode.window.showInformationMessage(' Hello formatter!,  success');
-		  if (error) {
-			console.error(`Error: ${error.message}`);
-			return;
-		  }
-		  if (stderr) {
-			console.error(`Stderr: ${stderr}`);
-			return;
-		  }
-		  // Replace the selected text in the editor with the formatted code
-		  editor.edit((editBuilder) => {
-			editBuilder.replace(editor.selection, stdout);
-		  });
+	  // Execute gofmt to format the code
+	  exec(`echo go fmt "${selectedText}"`, (error, stdout, stderr) => {
+		if (error) {
+		  console.error(`Error: ${error.message}`);
+		  return;
+		}
+		if (stderr) {
+		  console.error(`Stderr: ${stderr}`);
+		  return;
+		}
+  
+		// Replace the selected text with the formatted code
+		editor.edit((editBuilder) => {
+		  editBuilder.replace(editor.selection, stdout);
 		});
-	  }
+	  });
 	}
   }
+  
   
   
 
