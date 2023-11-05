@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: red;
+}
+
+header {
+    background-color: #007ACC;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007ACC;
+}
+
+/* Define more styles as needed */
