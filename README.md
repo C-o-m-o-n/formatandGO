@@ -32,6 +32,24 @@ Before you start using formatandgo, ensure you have the following requirements i
 
 - [Go Language](https://golang.org/dl/): You need to have Go installed on your machine to utilize this extension.
 
+## How to Get It
+
+1. Navigate to the releases section and download the file named: "formatandgo-0.0.1.vsix".
+2. Start your VS Code app and go to the extensions section.
+3. Click the menu (...) button for more options.
+4. Select "Install from VSIX..." and choose the file you downloaded.
+
+## How to Use It
+
+1. Open your Go project. Make sure you're in the root directory (where there is a go.mod file).
+2. Highlight the piece of code you want to format.
+3. Click `[CTRL+SHIFT+P]` to open the VS Code command palette.
+4. Type "format and go" and select it.
+
+That's it! Your code snippet will be formatted.
+
+---
+
 ## Extension Settings
 
 This extension doesn't require any configuration. You can simply install it and start using it.
