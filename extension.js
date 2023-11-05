@@ -32,7 +32,7 @@ function activate(context) {
 		  const selectedText = editor.document.getText(editor.selection);
 		  
 		  // Execute gofmt to format the code
-		  exec(`echo go fmt "${selectedText}"`, (error, stdout, stderr) => {
+		  exec(`sudo go fmt "${selectedText}"`, (error, stdout, stderr) => {
 		  vscode.window.showInformationMessage(' Formatted and went successfully');
 		if (error) {
 		  console.error(`Error: ${error.message}`);

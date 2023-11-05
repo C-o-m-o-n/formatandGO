@@ -3,7 +3,7 @@
   "displayName": "format And Go",
   "description": "An extension for formatting Go code",
   "version": "0.0.1",
-  "publisher": "your-publisher",
+  "publisher": "Comon",
   "icon": "images/faGO-icon.png",
   "repository": "https://github.com/C-o-m-o-n/formatandgo",
   "engines": {
