@@ -22,6 +22,7 @@ function formatGoCode() {
         // Send the go fmt command for the currently opened Go file to the terminal
         terminal.sendText(`go fmt "${fileName}"`);
 
+		vscode.window.showInformationMessage(' Formatted and went successfully');
         // Show the terminal to the user
         terminal.show();
 
