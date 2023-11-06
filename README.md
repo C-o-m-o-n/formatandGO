@@ -46,7 +46,7 @@ Before you start using formatandgo, ensure you have the following requirements i
 3. Click `[CTRL+SHIFT+P]` to open the VS Code command palette.
 4. Type "format and go" and select it.
 
-That's it! Your code snippet will be formatted.
+That's it! Your code will be formatted.
 
 ---
 
@@ -62,31 +62,14 @@ At the moment, there are no known issues with this extension. If you encounter a
 
 Stay up-to-date with the changes and improvements we make to the formatandgo extension:
 
-### 1.0.0
+### 0.0.1
 
-- Initial release of formatandgo.
+- [Initial release of formatandgo](https://github.com/C-o-m-o-n/formatandgo/commits/formatandGO).
 
-### 1.0.1
+### 0.0.2
 
-- Fixed issue #123: Bug description.
-
-### 1.1.0
-
-- Added features X, Y, and Z.
+- [second release of formatandGO](https://github.com/C-o-m-o-n/formatandGO/compare/formatandGO...formatandgo-v2).
 
 ---
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-- Split the editor (Cmd+\ on macOS or Ctrl+\ on Windows and Linux).
-- Toggle preview (Shift+Cmd+V on macOS or Shift+Ctrl+V on Windows and Linux).
-- Press Ctrl+Space (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-For more information on working with Markdown in Visual Studio Code:
-
-- [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics)
 
 **Enjoy using formatandgo to keep your Go code neat and organized!**
