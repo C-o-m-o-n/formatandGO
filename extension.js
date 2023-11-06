@@ -1,62 +1,40 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-const { exec } = require("child_process");
-
-
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-
-/**
- * @param {vscode.ExtensionContext} context
- */
-
 
 function activate(context) {
-	let disposable = vscode.commands.registerCommand(
-	  'formatandgo.formatGoCode',
-	  formatGoCode
-	);
-	context.subscriptions.push(disposable);
-  }
-  
-  
-  
-  //the main code.........
-  function formatGoCode() {
-	  // Get the active text editor
-	  const editor = vscode.window.activeTextEditor;
-	  
-	  if (editor) {
-		  // Get the selected text
-		  const selectedText = editor.document.getText(editor.selection);
-		  
-		  // Execute gofmt to format the code
-		  exec(`sudo go fmt "${selectedText}"`, (error, stdout, stderr) => {
-		  vscode.window.showInformationMessage(' Formatted and went successfully');
-		if (error) {
-		  console.error(`Error: ${error.message}`);
-		  return;
-		}
-		if (stderr) {
-		  console.error(`Stderr: ${stderr}`);
-		  return;
-		}
-  
-		// Replace the selected text with the formatted code
-		editor.edit((editBuilder) => {
-		  editBuilder.replace(editor.selection, stdout);
-		});
-	  });
-	}
-  }
-  
+    let disposable = vscode.commands.registerCommand(
+        'formatandgo.formatGoCode',
+        formatGoCode
+    );
+    context.subscriptions.push(disposable);
+}
 
+function formatGoCode() {
+    // Get the active text editor
+    const editor = vscode.window.activeTextEditor;
 
-// This method is called when your extension is deactivated
+    if (editor) {
+        const document = editor.document;
+        const fileName = document.fileName;
+
+        // Create a new terminal
+        const terminal = vscode.window.createTerminal('Go Terminal');
+
+        // Send the go fmt command for the currently opened Go file to the terminal
+        terminal.sendText(`go fmt "${fileName}"`);
+
+        // Show the terminal to the user
+        terminal.show();
+
+        // Handle any future terminal output if needed
+        // terminal.processId.onData((data) => {
+        //     // Process and handle the data if necessary
+        // });
+    }
+}
+
 function deactivate() {}
 
 module.exports = {
-	activate,
-	deactivate
+    activate,
+    deactivate
 }
