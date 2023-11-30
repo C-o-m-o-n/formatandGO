@@ -23,9 +23,6 @@ This extension helps you format your Go code with ease. It integrates the `go fm
 
 ![Formatting in Action](images/formatting-in-action.gif)
 
-# NOTICE
-## Please note that the project is still under development so most of it's features are experimental. Please do not use it on your important projects yet. I'll be more than happy to anounce to you once there is a stable release
-
 ## Requirements
 
 Before you start using formatandgo, ensure you have the following requirements in place:
